@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>right</title>
+</head>
+<body>
+    <span>Name Blog: </span>
+    <input type="text" id="name_blog">
+    <br />
+    <br />
+    <p>Description: </p>
+    <textarea id="desc" cols="80" rows="10"></textarea>
+    <br />
+    <br />
+    <button onclick="fillOutDone()">submit</button>
+
+    <script>
+        function fillOutDone() {
+            var name_blog = document.getElementById("name_blog").value;
+            var desc = document.getElementById("desc").value;
+            setCookie("name_blog", name_blog, 1);
+            setCookie("desc", desc, 1);
+            window.parent.frames[0].location.reload();
+        }
+
+        function setCookie(key, value, day) {
+            var d = new Date();
+            d.setTime(d.getTime()  + (day*24*60*60*1000));
+            var expire = "expire=" + d.toUTCString();
+            document.cookie = key + "=" + value + ";" + expire + ";path=/";
+        }
+    </script>
+</body>
+</html>

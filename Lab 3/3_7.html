@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Even Handling</title>
+    <script>
+        function changeColor(element){
+            element.nextElementSibling.style.color = element.style.color;
+        }
+        function getbackColor(element){
+            element.nextElementSibling.style.color = "#000000";
+        }
+    </script>
+</head>
+<body>
+    <a href="#" style="color: red;" onmouseover="changeColor(this)" onmouseout="getbackColor(this)">Link 1</a>
+    <p id="paragraph1">Paragraph 1</p>
+    <a href="#" style="color: blue;" onmouseover="changeColor(this)" onmouseout="getbackColor(this)">Link 2</a>
+    <p id="paragraph2">Paragraph 2</p>
+    <a href="#" style="color: green;" onmouseover="changeColor(this)" onmouseout="getbackColor(this)">Link 3</a>
+    <p id="paragraph3">Paragraph 3</p>
+</body>
+</html>

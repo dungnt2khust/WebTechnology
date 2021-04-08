@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>left</title>
+</head>
+<body>
+    <span>Name blog: </span>
+    <span id="name_blog"></span>
+    <br />
+    <span>Description: </span>
+    <span id="desc"></span>
+    <br />
+    <script >
+        document.getElementById('name_blog').innerHTML = getCookie("name_blog");
+        document.getElementById('desc').innerHTML = getCookie("desc");
+        
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+    </script>
+</body>
+</html>

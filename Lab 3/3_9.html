@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4 – Validate inputs</title>
+    <script>
+        function checkInfo(){
+            var checkUser = /^[a-z]{8,10}$/;
+            var checkEmail = /(\w+)@.+/;
+            var checkPhone = new RegExp("[0-9]{10}");
+            console.log(checkUser);
+            var result = "";
+            if(checkUser.test(document.getElementById("username").value) == false){
+                result +=
+                    "Username contains only lowercase letters and contains 8-10 characters\n";
+            }
+            if(checkEmail.test(document.getElementById("email").value) == false){
+                result += "Invalid Email.\n";     
+            }
+            if(checkPhone.test(document.getElementById("phone").value) == false){
+                result += "Invalid Phone.\n";       
+            }
+            console.log(checkPhone.test(document.getElementById("phone").value));
+            if(result == "") alert("Register successfully.");
+            else alert("Invalid:\n" + result) ;
+            
+        }
+    </script>
+</head>
+
+<body>
+    <form id="myForm">
+        <table>
+            <tr>
+                <td>Username: </td>
+                <td><input type="text" id="username" required></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="text" id="email"></td>
+            </tr>
+            <tr>
+                <td>Phone: </td>
+                <td><input type="text" id="phone"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submit" onclick="checkInfo()"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

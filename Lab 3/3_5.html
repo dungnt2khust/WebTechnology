@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add text fields</title>
+    <script>
+        var inputs = 1;
+        function addField(){
+            inputs++;
+            var form = document.getElementById("sweet-form");
+            var textbox = document.createElement("input");
+            var line_break = document.createElement("br");
+
+            textbox.setAttribute("type","text");
+            textbox.setAttribute("name","text_"+inputs);
+            textbox.setAttribute("value","I'm the boss #"+inputs);
+
+            form.appendChild(line_break);
+            form.appendChild(textbox);
+            return false;
+        }
+        function doLoad(){
+            document.getElementById("sweet-links").addEventListener("click", addField, false);
+        }
+        window.addEventListener("load",doLoad, false);
+    </script>
+</head>
+<body>
+  <form id="sweet-form">
+      <input type="text" name="text_1" value="I'm the boss #1">
+  </form>
+  <a href="#" id="sweet-links">Add text field</a>
+</body>
+</html>
