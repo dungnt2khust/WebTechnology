@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .left {
+        width: 50%;
+      }
+      .right {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        Your favorites blogs:
+        <p id="favoriteBlogs"></p>
+      </div>
+      <div class="right">
+        <label for="blog">Enter your favorite blog:</label>
+        <input type="text" name="blog" id="blogName" />
+        <button onclick="addBlog()">Submit</button>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    function addBlog() {
+      var cname = "blogName";
+      var cvalue = document.getElementById("blogName").value;
+      var exdays = 1;
+      var d = new Date();
+      d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+      var expires = "expires=" + d.toUTCString();
+      document.getElementById("favoriteBlogs").innerText = cvalue;
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      console.log(document.cookie)
+    }
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(";");
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == " ") {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    (function(){
+      var data = getCookie("blogName");
+      console.log(data)
+      document.getElementById("favoriteBlogs").innerText = data;
+    })()
+  </script>
+</html>
