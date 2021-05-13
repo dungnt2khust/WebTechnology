@@ -1,0 +1,81 @@
+body{
+    margin:0px;
+    padding: 0px;
+}
+#header{
+    background-color: #999966;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li a.active {
+    background-color: #58257b;
+    font-weight: bold;
+    color: white;
+}
+  
+li a:hover:not(.active) {
+    background-color: blue;
+    font-weight: bold;
+    color: white;
+}
+#header ul li {
+    float: left;
+    margin-left: 3%;    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+#header ul li:last-child {
+    float: right;
+    margin-right:3%
+}
+#content{
+    float: left;
+    background-color:white;   
+    height: 650 px;
+    width: 80%;
+}
+#rightcol {
+    background-color: gray;
+    float: right;   
+    width: 20%;
+    height: 650px;
+}
+
+
+#footer {
+    background-color: green;
+    clear:both;
+    height:50px;
+    margin-bottom: 0;
+}
+#rightcol ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.animation {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+

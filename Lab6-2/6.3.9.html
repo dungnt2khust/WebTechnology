@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.3.9 Three-column liquid layout with floating boxes</title>
+    <style type="text/css">
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #header {
+            background-color: #0f0;
+            width: 100%;
+        }
+        #leftcol {
+            background-color: red;
+            float: left;
+            width: 20%;
+            height: 500px;
+        }
+        #rightcol {
+            background-color: red;
+            float: right;
+            width: 20%;
+            height: 500px;
+        }
+        #content {
+            background-color: yellow;
+            float: left;
+            width: 60%;
+            height: 500px;
+        }
+
+        #footer {
+            background-color: #0f0;
+            clear: both;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">Header Section</div>
+    <div id="leftcol">Left Section</div>
+    <div id="content">Content Section</div>
+    <div id="rightcol">Right Section</div>
+    <div id="footer">Footer Section</div>
+    
+</body>
+</html>
