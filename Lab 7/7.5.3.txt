@@ -1,0 +1,12 @@
+Sự khác nhau giữa Định nghĩa Lược đồ XML (XSD) và Định nghĩa loại tài liệu (DTD) bao gồm:
+
+- Các lược đồ XML được viết bằng XML trong khi DTD được lấy từ cú pháp SGML.
+- Các lược đồ XML xác định các kiểu dữ liệu cho các thành phần và thuộc tính trong khi DTD không hỗ trợ các kiểu dữ liệu.
+- Các lược đồ XML cho phép hỗ trợ các không gian tên trong khi DTD thì không.
+- Các lược đồ XML xác định số lượng và thứ tự của các phần tử con, trong khi DTD thì không.
+- Các lược đồ XML có thể được tự thao tác với XML DOM nhưng không thể thực hiện được trong trường hợp DTD.
+- sử dụng lược đồ XML người dùng không cần phải học một ngôn ngữ mới nhưng làm việc với DTD là khó khăn đối với người dùng.
+- Lược đồ XML cung cấp giao tiếp dữ liệu an toàn, tức là người gửi có thể mô tả dữ liệu theo cách mà người nhận sẽ hiểu, nhưng trong trường hợp dữ liệu DTD có thể bị người nhận hiểu nhầm.
+- Các lược đồ XML có thể mở rộng trong khi DTD không thể mở rộng.
+- DTD cho phép bạn xác định các giá trị ENTITY mới để sử dụng trong tệp XML của mình.
+- DTD cho phép bạn mở rộng nó cục bộ thành một tệp XML riêng lẻ.
