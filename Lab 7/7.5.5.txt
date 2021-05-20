@@ -1,0 +1,7 @@
+* XML thường được sử dụng làm cơ sở cho các định dạng tài liệu khác. Dưới đây là một số định dạng bạn có thể biết:
+ - Microsoft .NET sử dụng XML cho các file cấu hình của nó.
+ - Sitemap
+ - XUL, EPUB, ATOM, Android SDK
+
+ * XML dùng để cấu trúc, lưu trữ và trong trao đổi dữ liệu giữa các ứng dụng và lưu trữ dữ liệu. Ví dụ khi ta xây dựng một ứng dụng bằng Php và một ứng dụng bằng Java thì hai ngôn ngữ này không thể hiểu nhau, vì vậy ta sẽ sử dụng XML để trao đổi dữ liệu. Chính vì vậy, XML có tác dụng rất lớn trong việc chia sẻ, trao đổi dữ liệu giữa các hệ thống.
+ 
